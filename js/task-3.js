@@ -1,9 +1,7 @@
-const sortByDescendingFriendCount = users => {
-  return users.sort((a, b) => b.friends.length - a.friends.length).toSorted();
+const sortByDescendingFriendCount = (users) => {
+ return users.toSorted((user1, user2) => user2.friends.length - user1.friends.length);
+  
 }
-
-console.log(sortByDescendingFriendCount(users));
-
 console.log(
   sortByDescendingFriendCount([
     {
@@ -43,6 +41,7 @@ console.log(
     }
   ])
 );
+
 // [
 //   {
 //     name: "Ross Vazquez",
@@ -80,5 +79,3 @@ console.log(
 //     gender: "male"
 //   }
 // ]
-
-
